@@ -4,20 +4,21 @@ return {
   -- tag = "v2.15", -- uncomment to pin to a specific release
   init = function()
     -- VimTeX configuration goes here, e.g.
-    vim.g.vimtex_view_method = "zathura"
-    
+    vim.g.vimtex_view_method = "sioyek"
+
     -- Compiler settings for biber support
     vim.g.vimtex_compiler_latexmk = {
-      build_dir = '',
+      build_dir = "",
       callback = 1,
       continuous = 1,
-      executable = 'latexmk',
+      executable = "latexmk",
       options = {
-        '-pdf',
-        '-verbose',
-        '-file-line-error',
-        '-synctex=1',
-        '-interaction=nonstopmode',
+        "-pdf",
+        "-verbose",
+        "-file-line-error",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-shell-escape",
       },
     }
   end,
